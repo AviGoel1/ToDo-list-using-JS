@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    color: rgb(3, 3, 3);
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+h3{
+    color: rgb(3, 3, 3);
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-style:oblique;
+}
+
+#leftDiv {
+    flex: 1;
+    height: 100%;
+    background: wheat;
+}
+
+#rightDiv {
+    flex: 1;
+    height: 100%;
+}
+
+.textbox{
+    border: 0px;
+    width: 100%;
+    font-size: 2em;
+    height: 100%;
+}
+
+.toDoContainer{
+    border-bottom: 1px solid black;
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-between;
+    vertical-align: auto;
+    margin: 10px;
+}
+
+.checkBox{
+    width: 2em;
+    height: 2em;
+}
+
+.task{
+    flex-grow: 10;
+}
