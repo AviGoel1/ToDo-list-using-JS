@@ -77,8 +77,17 @@ function eventHandler(event) {
         })
 
         readButton.addEventListener("click", function () {
+            var val = taskheading.innerHTML;
+            var ind;
+            toDos.forEach(function (currval, index) {
+                if (currval == val) {
+                    ind = index;
+                }
+            })
             readButton.innerHTML = "check_box";
             taskheading.innerHTML = "<strike>" + taskheading.innerHTML + "</strike>"
+            toDos[ind] = taskheading.innerHTML;
+            localStorage.setItem("todos", JSON.stringify(toDos));
         })
 
         editButton.addEventListener("click", function () {
@@ -148,8 +157,17 @@ toDos.forEach(function (value) {
     })
 
     readButton.addEventListener("click", function () {
+        var val = taskheading.innerHTML;
+        var ind;
+        toDos.forEach(function (currval, index) {
+            if (currval == val) {
+                ind = index;
+            }
+        })
         readButton.innerHTML = "check_box";
         taskheading.innerHTML = "<strike>" + taskheading.innerHTML + "</strike>"
+        toDos[ind] = taskheading.innerHTML;
+        localStorage.setItem("todos", JSON.stringify(toDos));
     })
 
     editButton.addEventListener("click", function () {
